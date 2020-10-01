@@ -24,8 +24,8 @@ public class GreetingController {
 
     @GetMapping
     public String main(Map<String,Object> model) {
-       Iterable<Message> messages = messageRepo.findAll();
-       model.put("messages ",messages);
+    //   Iterable<Message> messages = messageRepo.findAll();
+    //   model.put("messages",messages);
         return "main";
     }
 
@@ -34,7 +34,13 @@ public class GreetingController {
       Message message = new Message(text,tag);
       messageRepo.save(message);
       Iterable<Message> messages = messageRepo.findAll();
-      model.put("messages ",messages);
+      model.put("messages",messages);
+      return "main";
+    }
+
+    @PostMapping
+    public String filter(@RequestParam String text, Map<String,Object> model) {
+
       return "main";
     }
 }
