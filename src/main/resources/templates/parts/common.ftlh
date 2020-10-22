@@ -1,6 +1,6 @@
 <#macro page>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sweater</title>
@@ -13,7 +13,7 @@
 <body>
 <#include "navbar.ftlh">
 <div class="container mt-5" >
-<#nested>
+    <#nested>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
