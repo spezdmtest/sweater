@@ -4,7 +4,7 @@ import javax.persistence.*;
 @Entity // This tells Hibernate to make a table out of this class
 public class Message {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String text;
     private String tag;
