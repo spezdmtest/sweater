@@ -9,14 +9,6 @@ public class Message {
     private String text;
     private String tag;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     private User author;
@@ -43,6 +35,14 @@ public class Message {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTag() {
