@@ -90,7 +90,7 @@ public class UserService implements UserDetailsService {
         boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
                 (userEmail != null && !userEmail.equals(email));
 
-        if (isEmailChanged) {
+        if (isEmailChanged) { // если e-mail изменился то его нужно обновить у пользователя
             user.setEmail(email);
 
             if (!StringUtils.isEmpty(email)) {
